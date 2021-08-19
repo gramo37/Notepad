@@ -1,0 +1,23 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">TodoList</a>
+    </div>
+  </nav>
+  
+  <div class="main-container-body">
+      <form class="container-fluid">
+          <div>
+            <input placeholder="Title" type="text" [(ngModel)] = "title" name="title" class="titleClass" id="title" aria-describedby="emailHelp">
+            
+          </div>
+          <div class="my-1">
+            <textarea placeholder="Description" type="text" [(ngModel)] = "desc" name="desc" class=" descriptionClass" id="desc"></textarea>
+          </div>
+         <div class="buttonClass">
+           <button type="button" routerLink="/" class="btn btn-primary" (click)="gotoTodos()" >Done</button>
+         </div>
+        </form>
+  </div>
+  
+  
+  

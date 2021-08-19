@@ -1,0 +1,46 @@
+.card{
+    width: 46vw;
+    margin: 0px 4px;
+}
+.cardTitleClass{
+    overflow: hidden;
+    max-width: 90px;
+}
+.card-body{
+    padding: 0px;
+}
+.content-holder{
+    min-width: calc(100% - 30px);
+    padding: 13px;
+    padding-top: 4px;
+}
+
+.descriptionClass{
+    white-space: pre-wrap; 
+    height: 95px; 
+    overflow-y: scroll;
+}
+
+.input-holder{
+    padding: 13px 10px;
+    padding-bottom: 0px;
+}
+
+.strike{
+    text-decoration: line-through;
+}
+
+.nostrike{
+    text-decoration: none;
+}
+
+.showOption{
+    transform: translate(-45%, 0%);
+    opacity: 1;
+    z-index: 10;
+}
+.hideOption{
+    transform: translate(0%, -45%);
+    opacity: 0;
+    z-index: -1;
+}

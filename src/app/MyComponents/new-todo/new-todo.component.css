@@ -1,0 +1,28 @@
+
+.buttonClass{
+    width: 100%;
+    height: calc(10vh - 10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.descriptionClass{
+    height: 74vh; 
+    border: none;
+    width: 100%;
+    
+}
+
+.descriptionClass:hover{
+    border: none;
+}
+
+.titleClass{
+    width: 100%;
+    padding: 0%;
+    height: 5vh; 
+    border-radius: 0%; 
+    border: none; 
+    border-bottom: 1px solid rgb(206, 206, 206);
+}
