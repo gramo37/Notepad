@@ -16,6 +16,7 @@ export class TodosComponent implements OnInit {
   todos: Todo[];
   localItem: string | null;
   constructor(private router:Router, private activatedRoute: ActivatedRoute, private _eref: ElementRef) { 
+    // Logic for adding data from local storage to local variables
     this.localItem = localStorage.getItem("todos");
     if (this.localItem == null){
       this.todos = []
@@ -25,6 +26,7 @@ export class TodosComponent implements OnInit {
     }
   }
 
+  // Logic for clicking outside todos Component
   onClick(event: { target: any; }) {
     if (!this._eref.nativeElement.contains(event.target)) {
       this.todos.forEach(element => {

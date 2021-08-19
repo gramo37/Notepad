@@ -13,6 +13,7 @@
   <ng-template #elseBlock>
     <div class=" d-flex flex-wrap justify-content-center" style="margin: auto; width: 99vw;">
       <div class="my-2" *ngFor="let todo of todos">
+        <!-- Sending each todo in this.todos to todo-item.component -->
         <app-todo-item [todo]="todo" (todoDelete)="deleteTodo(todo)" (todoCheck)="checkTodo(todo)" (todoOptions)="showOptions(todo)"></app-todo-item>
       </div>
     </div>

@@ -20,6 +20,8 @@
 }
 
 .list-holder{
+    height: 120px;
+    overflow: scroll;
     padding: 5px 0px;
     margin-top: 1px;
     border: 1px solid grey;

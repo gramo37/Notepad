@@ -21,6 +21,7 @@ export class NewTodoComponent implements OnInit {
     // console.log(this.router.getCurrentNavigation()?.extras.state);
   }
   
+  // Logic for clicking outside window
   @HostListener('window:popstate', ['$event'])
   onPopState(event: any) {
     console.log('Back button pressed');

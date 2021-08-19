@@ -24,6 +24,8 @@ export class TodoDisplayComponent implements OnInit {
     
   }
   
+
+  // This code is played when we press back button 
   @HostListener('window:popstate', ['$event'])
   onPopState(event: any) {
     console.log('Back button pressed');

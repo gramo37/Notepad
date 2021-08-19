@@ -2,14 +2,13 @@ import { Component, OnInit, Input, Output, EventEmitter, Directive, ElementRef, 
 import { Router } from '@angular/router';
 import { Todo } from 'src/app/Todo';
 
-
 @Component({
   selector: 'app-todo-item',
   templateUrl: './todo-item.component.html',
   styleUrls: ['./todo-item.component.css']
 })
 export class TodoItemComponent implements OnInit {
-  @Input() todo!: Todo;
+  @Input() todo!: Todo; // Accepting todo from todo.component
   @Output() todoDelete: EventEmitter<Todo> = new EventEmitter();
   @Output() editTodo: EventEmitter<Todo> = new EventEmitter();
   @Output() todoCheck: EventEmitter<Todo> = new EventEmitter();
