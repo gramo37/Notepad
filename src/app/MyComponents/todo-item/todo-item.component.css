@@ -3,8 +3,9 @@
     margin: 0px 4px;
 }
 .cardTitleClass{
+    cursor: context-menu;
     overflow: hidden;
-    max-width: 90px;
+    max-width: max-content;
 }
 .card-body{
     padding: 0px;
@@ -16,6 +17,7 @@
 }
 
 .descriptionClass{
+    cursor: context-menu;
     white-space: pre-wrap; 
     height: 95px; 
     overflow-y: scroll;

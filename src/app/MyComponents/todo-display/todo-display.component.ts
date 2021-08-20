@@ -9,6 +9,8 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class TodoDisplayComponent implements OnInit {
   
+
+  options!: Boolean | true;
   title!: string;
   desc!: string;
   todo!: {
@@ -24,7 +26,16 @@ export class TodoDisplayComponent implements OnInit {
     
   }
   
-
+  showNavbarOptions(){
+    // this.options = true;
+    if (this.options == false || this.options == undefined){
+      this.options = true;
+    }
+    else{
+      this.options = false;
+    }
+    console.log(this.options)
+  }
   // This code is played when we press back button 
   @HostListener('window:popstate', ['$event'])
   onPopState(event: any) {

@@ -8,6 +8,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class NewTodoComponent implements OnInit {
 
+  options!: Boolean | true;
   title!: string;
   desc!: string;
   todo!: {
@@ -21,16 +22,26 @@ export class NewTodoComponent implements OnInit {
     // console.log(this.router.getCurrentNavigation()?.extras.state);
   }
   
-  // Logic for clicking outside window
+  // Logic for clicking back buttons
   @HostListener('window:popstate', ['$event'])
   onPopState(event: any) {
-    console.log('Back button pressed');
     console.log(event)
     this.gotoTodos()
   }
 
   ngOnInit() {
   
+  }
+
+  showNavbarOptions(){
+    // this.options = true;
+    if (this.options == false || this.options == undefined){
+      this.options = true;
+    }
+    else{
+      this.options = false;
+    }
+    console.log(this.options)
   }
 
   gotoTodos(){
@@ -41,6 +52,7 @@ export class NewTodoComponent implements OnInit {
       "desc": this.desc,
       "active": true
     }
+    // This code will send new todo data entered to the home page
     this.router.navigateByUrl('', {state: this.todo})
     
   }

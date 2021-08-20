@@ -1,6 +1,15 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">TodoList</a>
+<nav class="navbar">
+  <div class="logo">
+      Notepad
+  </div>
+  <div class="icon-holder" id="icon-holder-id" (click) = "showNavbarOptions()">
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <ul class="list-holder-navbar" id="list-holder-id" [ngClass]="{'showNavbarOption': !options, 'hideNavbarOption': !options}">
+          <li class="list"><a href="#">Undo</a></li>
+          
+      </ul>
   </div>
 </nav>
 

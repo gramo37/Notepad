@@ -31,6 +31,7 @@ export class TodoItemComponent implements OnInit {
   }
 
   editClicked(todo: Todo){
+    // send data to display using routing
     this.router.navigateByUrl('/display', {state: this.todo})
     this.todoDelete.emit(todo);
   }

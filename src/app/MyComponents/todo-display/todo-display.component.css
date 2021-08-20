@@ -1,4 +1,15 @@
 
+.showNavbarOption{
+    transform: translate(-45%, 0%);
+    opacity: 1;
+    z-index: 10;
+}
+.hideNavbarOption{
+    transform: translate(0%, -45%);
+    opacity: 0;
+    z-index: -1;
+}
+
 .buttonClass{
     width: 100%;
     height: calc(10vh - 10px);

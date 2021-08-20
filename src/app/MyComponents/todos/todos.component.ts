@@ -13,6 +13,7 @@ import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 })
 export class TodosComponent implements OnInit {
 
+  options!: Boolean | true;
   todos: Todo[];
   localItem: string | null;
   constructor(private router:Router, private activatedRoute: ActivatedRoute, private _eref: ElementRef) { 
@@ -32,6 +33,7 @@ export class TodosComponent implements OnInit {
       this.todos.forEach(element => {
         element.options = false;
       });
+      this.options = false;
     }
   }
 
@@ -50,11 +52,25 @@ export class TodosComponent implements OnInit {
      }
   }
 
+  // Logic for showing todo options
+  showNavbarOptions(){
+    // this.options = true;
+    if (this.options == false || this.options == undefined){
+      this.options = true;
+    }
+    else{
+      this.options = false;
+    }
+    console.log(this.options)
+  }
+
+  // Logic for showing todo-item option
   showOptions(todo:Todo){
     if (todo.options == false || todo.options == undefined){
       this.todos.forEach((ele)=>{
         ele.options = false;
       });
+      this.options = false
       todo.options = true;
     }
     else {
