@@ -22,6 +22,7 @@ export class TodoItemComponent implements OnInit {
     this.todoDelete.emit(todo);
   }
 
+
   onCheckboxClick(todo: Todo){
     this.todoCheck.emit(todo);
   }

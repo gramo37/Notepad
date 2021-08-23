@@ -1,0 +1,6 @@
+git init
+git add .
+git commit -m "<message>"
+git push - u origin master
+ng build --prod --base-href "https://gramo37.github.io/Notepad/"
+ngh --dir dist/notepad 

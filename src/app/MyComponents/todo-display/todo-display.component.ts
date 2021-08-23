@@ -10,6 +10,8 @@ export class TodoDisplayComponent implements OnInit {
   options!: Boolean | true;
   title!: string;
   desc!: string;
+  active!: boolean;
+
   todo!: {
     "sno": number,
     "title": string
@@ -39,15 +41,16 @@ export class TodoDisplayComponent implements OnInit {
   }
   ngOnInit() {
     // Assigning todo values recieved from routing to the local variables
-    this.title = history.state.title
-    this.desc = history.state.desc
+    this.title = history.state.title;
+    this.desc = history.state.desc;
+    this.active = history.state.active;
   }
   gotoTodos() {
     this.todo = {
       "sno": 8,
       "title": this.title,
       "desc": this.desc,
-      "active": history.state.active,
+      "active": this.active,
       "options": false
     }
     this.router.navigateByUrl('', { state: this.todo })
