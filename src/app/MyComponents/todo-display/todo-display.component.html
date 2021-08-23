@@ -1,31 +1,29 @@
 <nav class="navbar">
   <div class="logo">
-      Notepad
+    Notepad
   </div>
-  <div class="icon-holder" id="icon-holder-id" (click) = "showNavbarOptions()">
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <ul class="list-holder-navbar" id="list-holder-id" [ngClass]="{'showNavbarOption': !options, 'hideNavbarOption': !options}">
-          <li class="list"><a href="#">Undo</a></li>
-          
-      </ul>
+  <div class="icon-holder" id="icon-holder-id" (click)="showNavbarOptions()">
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <ul class="list-holder-navbar" id="list-holder-id"
+      [ngClass]="{'showNavbarOption': !options, 'hideNavbarOption': !options}">
+      <li class="list"><a href="#">Undo</a></li>
+    </ul>
   </div>
 </nav>
-
 <div class="main-container-body">
-    <form class="container-fluid">
-        <div>
-          <input placeholder="Title" type="text" [(ngModel)] = "title" name="title" class="titleClass" id="title" aria-describedby="emailHelp">
-          
-        </div>
-        <div class="my-1">
-          <textarea placeholder="Description" type="text" [(ngModel)] = "desc" name="desc" class=" descriptionClass" id="desc"></textarea>
-        </div>
-       <div class="buttonClass">
-         <button type="button" routerLink="/" class="btn btn-primary" (click)="gotoTodos()" >Done</button>
-       </div>
-      </form>
+  <form class="container-fluid">
+    <div>
+      <input placeholder="Title" type="text" [(ngModel)]="title" name="title" class="titleClass" id="title"
+        aria-describedby="emailHelp">
+    </div>
+    <div class="my-1">
+      <textarea placeholder="Description" type="text" [(ngModel)]="desc" name="desc" class=" descriptionClass"
+        id="desc"></textarea>
+    </div>
+    <div class="buttonClass">
+      <button type="button" routerLink="/" class="btn btn-primary" (click)="gotoTodos()">Done</button>
+    </div>
+  </form>
 </div>
-
-<!--  (click)="gotoTodos()" -->

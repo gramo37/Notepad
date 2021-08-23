@@ -1,15 +1,12 @@
 import { Component, EventEmitter, HostListener, Input, OnInit, Output } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-
 @Component({
   selector: 'app-todo-display',
   templateUrl: './todo-display.component.html',
   styleUrls: ['./todo-display.component.css'],
-  
+
 })
 export class TodoDisplayComponent implements OnInit {
-  
-
   options!: Boolean | true;
   title!: string;
   desc!: string;
@@ -20,18 +17,15 @@ export class TodoDisplayComponent implements OnInit {
     "active": boolean,
     "options": false
   }
-  
-  constructor(private router: Router, private activatedRoute: ActivatedRoute) { 
+  constructor(private router: Router, private activatedRoute: ActivatedRoute) {
     // console.log(this.router.getCurrentNavigation()?.extras.state);
-    
   }
-  
-  showNavbarOptions(){
+  showNavbarOptions() {
     // this.options = true;
-    if (this.options == false || this.options == undefined){
+    if (this.options == false || this.options == undefined) {
       this.options = true;
     }
-    else{
+    else {
       this.options = false;
     }
     console.log(this.options)
@@ -43,24 +37,19 @@ export class TodoDisplayComponent implements OnInit {
     console.log(event)
     this.gotoTodos()
   }
-
   ngOnInit() {
     // Assigning todo values recieved from routing to the local variables
     this.title = history.state.title
     this.desc = history.state.desc
-
   }
-
-  gotoTodos(){
-    
+  gotoTodos() {
     this.todo = {
       "sno": 8,
       "title": this.title,
       "desc": this.desc,
-      "active": true,
+      "active": history.state.active,
       "options": false
     }
-    this.router.navigateByUrl('', {state: this.todo})
-    
+    this.router.navigateByUrl('', { state: this.todo })
   }
 }
